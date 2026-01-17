@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Iorgulescu - Avocat de Drept Penal | Apărare Juridică Profesională</title>
+    <meta name="description" content="Avocat specializat în drept penal cu peste 10 ani experiență. Apărare juridică profesională pentru cazuri penale complexe. Consultații confidențiale.">
+    <style>
+        :root {
+            --primary-blue: #1e3a8a;
+            --dark-gray: #374151;
+            --light-gray: #f9fafb;
+            --white: #ffffff;
+            --warm-beige: #f5f3f0;
+            --accent-blue: #3b82f6;
+            --text-dark: #111827;
+            --text-gray: #6b7280;
+            --border-light: #e5e7eb;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-blue);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-blue);
+        }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .nav-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-dark);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background-image: linear-gradient(rgba(30, 58, 138, 0.7), rgba(30, 58, 138, 0.7)), url('https://source.unsplash.com/1200x800/?Professional%20legal%20environment%20conveying%20trust%20and%20expertise');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-blue);
+            color: var(--white);
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+        }
+
+        .cta-button:hover {
+            background-color: var(--primary-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        .about {
+            background-color: var(--light-gray);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text {
+            padding: 40px;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 30px;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .key-points {
+            list-style: none;
+        }
+
+        .key-points li {
+            padding: 10px 0;
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .key-points li::before {
+            content: "✓";
+            color: var(--accent-blue);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .about-image {
+            height: 500px;
+            border-radius: 10px;
+            background-image: url('https://source.unsplash.com/1200x800/?Professional%20legal%20consultation%20environment');
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 5px solid var(--accent-blue);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: var(--text-gray);
+            line-height: 1.7;
+        }
+
+        /* Process Section */
+        .process {
+            background-color: var(--warm-beige);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background-color: var(--accent-blue);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 0 auto 20px;
+            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+        }
+
+        .process-step h3 {
+            font-size: 1.4rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+
+        .process-step p {
+            color: var(--text-gray);
+            line-height: 1.7;
+        }
+
+        /* CTA Section */
+        .cta {
+            background-image: linear-gradient(rgba(30, 58, 138, 0.9), rgba(30, 58, 138, 0.9)), url('https://source.unsplash.com/1200x800/?Professional%20trust%20and%20immediate%20action');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .cta p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .cta-benefit {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .cta-benefit::before {
+            content: "✓";
+            color: var(--white);
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: var(--light-gray);
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 60px;
+            margin-top: 60px;
+        }
+
+        .contact-info {
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-item {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .contact-item h4 {
+            color: var(--primary-blue);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-item p {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+        }
+
+        .contact-item a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--white);
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                gap: 1rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-toggle {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-header h2 {
+                font-size: 2.2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .about-text {
+                padding: 20px;
+            }
+
+            .about-text h2 {
+                font-size: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .cta h2 {
+                font-size: 2.2rem;
+            }
+
+            .cta p {
+                font-size: 1.1rem;
+            }
+
+            .cta-benefits {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Mario Iorgulescu</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Acasă</a></li>
+                <li><a href="#about">Despre</a></li>
+                <li><a href="#services">Servicii</a></li>
+                <li><a href="#process">Proces</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h1>Apărare Juridică de Încredere în Dreptul Penal</h1>
+                <p>Cu peste 10 ani de experiență în dreptul penal, vă ofer reprezentarea juridică profesională de care aveți nevoie în momentele dificile. Expertiza, dedicarea și rezultatele vorbesc pentru mine.</p>
+                <a href="#contact" class="cta-button">Programează o consultație</a>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text fade-in">
+                        <h2>Mario Iorgulescu - Expertiza Ta în Dreptul Penal</h2>
+                        <p>Cu o carieră de peste 10 ani dedicată exclusiv dreptului penal, am reprezentat cu succes sute de clienți în cazuri complexe. Formarea mea continuă și pasiunea pentru justiție mă motivează să ofer fiecărui client o apărare personalizată și eficientă.</p>
+                        <ul class="key-points">
+                            <li>Peste 10 ani de experiență exclusiv în drept penal</li>
+                            <li>Reprezentare în toate instanțele din România</li>
+                            <li>Abordare personalizată pentru fiecare caz</li>
+                            <li>Consultații confidențiale și profesionale</li>
+                            <li>Rezultate demonstrate în cazuri complexe</li>
+                        </ul>
+                    </div>
+                    <div class="about-image fade-in"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>Servicii Juridice Specializate</h2>
+                    <p>Ofer servicii complete de reprezentare juridică în toate aspectele dreptului penal, de la consultații inițiale până la reprezentarea în instanță.</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card fade-in">
+                        <h3>Apărare în Procesul Penal</h3>
+                        <p>Reprezentare completă în toate fazele procesului penal, de la cercetarea penală până la executarea sentinței.</p>
+                    </div>
+                    <div class="service-card fade-in">
+                        <h3>Consultații Juridice Penale</h3>
+                        <p>Analiza detaliată a cazului, evaluarea riscurilor juridice și strategii de apărare personalizate.</p>
+                    </div>
+                    <div class="service-card fade-in">
+                        <h3>Asistență în Cercetarea Penală</h3>
+                        <p>Reprezentare în faza de urmărire penală, audieri și alte proceduri pre-procesuale.</p>
+                    </div>
+                    <div class="service-card fade-in">
+                        <h3>Apeluri și Recursuri</h3>
+                        <p>Contestarea hotărârilor judecătorești prin toate căile de atac disponibile în sistemul juridic.</p>
+                    </div>
+                    <div class="service-card fade-in">
+                        <h3>Drept Penal Economic</h3>
+                        <p>Specializare în infracțiuni economico-financiare, fraudă, evaziune fiscală și alte delicte complexe.</p>
+                    </div>
+                    <div class="service-card fade-in">
+                        <h3>Asistență de Urgență</h3>
+                        <p>Disponibilitate pentru situații urgente, rețineri și arestări preventive.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="process">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>Cum Funcționează Colaborarea</h2>
+                    <p>Un proces transparent și structurat pentru a vă oferi cea mai bună apărare juridică.</p>
+                </div>
+                <div class="process-steps">
+                    <div class="process-step fade-in">
+                        <div class="step-number">1</div>
+                        <h3>Consultația Inițială</h3>
+                        <p>Discutăm cazul dumneavoastră în detaliu, analizez documentele și evaluez situația juridică.</p>
+                    </div>
+                    <div class="process-step fade-in">
+                        <div class="step-number">2</div>
+                        <h3>Strategia de Apărare</h3>
+                        <p>Dezvolt o strategie juridică personalizată, adaptată specificului cazului și obiectivelor dumneavoastră.</p>
+                    </div>
+                    <div class="process-step fade-in">
+                        <div class="step-number">3</div>
+                        <h3>Reprezentarea Juridică</h3>
+                        <p>Vă reprezint în toate procedurile legale, mențin comunicarea constantă și vă țin la curent cu evoluțiile.</p>
+                    </div>
+                    <div class="process-step fade-in">
+                        <div class="step-number">4</div>
+                        <h3>Rezultate și Urmărire</h3>
+                        <p>Monitorizez implementarea soluțiilor juridice și ofer suport continuu după finalizarea cazului.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta" class="cta">
+            <div class="container">
+                <h2>Aveți Nevoie de Apărare Juridică?</h2>
+                <p>Nu lăsați problemele juridice să vă afecteze viitorul. Contactați-mă astăzi pentru o consultație profesională și aflați cum vă pot ajuta.</p>
+                <div class="cta-benefits fade-in">
+                    <div class="cta-benefit">Consultația inițială confidențială</div>
+                    <div class="cta-benefit">Răspuns rapid la urgențe</div>
+                    <div class="cta-benefit">Experiență dovedită în dreptul penal</div>
+                </div>
+                <a href="#contact" class="cta-button">Contactează-mă acum</a>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2>Contact</h2>
+                    <p>Sunt disponibil pentru consultații și pot fi contactat prin următoarele modalități:</p>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info fade-in">
+                        <div class="contact-item">
+                            <h4>Email</h4>
+                            <p><a href="mailto:john@example.com">john@example.com</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>Telefon</h4>
+                            <p><a href="tel:1234567890">1234567890</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>Program</h4>
+                            <p>Luni - Vineri: 09:00 - 18:00</p>
+                        </div>
+                    </div>
+                    <div class="contact-info fade-in">
+                        <div class="contact-item">
+                            <h4>Urgențe</h4>
+                            <p>Pentru urgențe, vă rog să apelați numărul de telefon pentru a lăsa un mesaj vocal.</p>
+                        </div>
+                        <div class="contact-item">
+                            <h4>Programare Consultație</h4>
+                            <p>Prima consultație poate fi programată telefonic sau prin email pentru a discuta detaliile cazului dumneavoastră.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mario Iorgulescu - Avocat de drept penal. Toate drepturile rezervate.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        navLinks.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A') {
+                navLinks.classList.remove('active');
+            }
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Header background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.backgroundColor = 'var(--white)';
+                header.style.backdropFilter = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
